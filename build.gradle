@@ -66,6 +66,7 @@ processResources {
         expand props
     }
 }
+
 shadowJar {
     relocate 'co.aikar.commands', 'org.hakerplugin.guishop.acf'
     relocate 'co.aikar.locales', 'org.hakerplugin.guishop.locales'

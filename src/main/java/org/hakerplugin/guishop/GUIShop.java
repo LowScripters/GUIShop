@@ -16,7 +16,6 @@ public final class GUIShop extends JavaPlugin {
         instance = this;
         BukkitCommandManager manager = new BukkitCommandManager(this);
         manager.registerCommand(new Commands());
-        //getServer().getPluginManager().registerEvents(new BowEvent(), this);
     }
     public static GUIShop getInstance(){
         return instance;
