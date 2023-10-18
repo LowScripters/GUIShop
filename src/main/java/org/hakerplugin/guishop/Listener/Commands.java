@@ -62,7 +62,6 @@ public class Commands extends BaseCommand {
     public void hoppAdd(InventoryClickEvent rootEvent, Player player, ScrollingGui gui){
         int price = Integer.valueOf(myList.get(rootEvent.getSlot()*3+1).substring(6));
         int count = Integer.valueOf(myList.get(rootEvent.getSlot()*3+2).substring(6));
-        //hopp.updateTitle("APPLY\n - " + String.valueOf(rootEvent.getCurrentItem()) + " " + String.valueOf(price));
         GuiItem hoppItem = ItemBuilder.from(Material.GREEN_STAINED_GLASS_PANE).name(Component.text("APPLY")).asGuiItem(event -> {
             event.setCancelled(true);
             if (!(player.getInventory().contains(Material.DIAMOND,price))){
