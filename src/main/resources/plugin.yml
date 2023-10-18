@@ -1,0 +1,4 @@
+name: GUIShop
+version: '${version}'
+main: org.hakerplugin.guishop.GUIShop
+api-version: '1.19'

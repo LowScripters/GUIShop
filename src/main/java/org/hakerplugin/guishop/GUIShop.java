@@ -1,0 +1,29 @@
+package org.hakerplugin.guishop;
+
+import co.aikar.commands.BukkitCommandManager;
+import org.bukkit.plugin.java.JavaPlugin;
+import org.hakerplugin.guishop.Listener.Commands;
+
+import java.util.logging.Logger;
+
+public final class GUIShop extends JavaPlugin {
+
+    private static GUIShop instance;
+    @Override
+    public void onEnable() {
+        Logger log = getLogger();
+        log.info("Ihr Plugin läuft, willkommen!");
+        instance = this;
+        BukkitCommandManager manager = new BukkitCommandManager(this);
+        manager.registerCommand(new Commands());
+        //getServer().getPluginManager().registerEvents(new BowEvent(), this);
+    }
+    public static GUIShop getInstance(){
+        return instance;
+    }
+
+    @Override
+    public void onDisable() {
+        // Plugin shutdown logic
+    }
+}
